@@ -1,0 +1,38 @@
+<?php
+
+function motor_init() {
+  // jquery.cookie plugin is not being loaded for anonymous users
+  // causing all jQuery and Javascript to break on the site.
+  drupal_add_library('system', 'jquery.cookie');
+}
+
+function motor_menu() {
+  $items['jumime'] = array(
+    'title' => t('Let\'s start!'),
+    'page callback' => 'motor_start',
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  
+
+
+
+  return $items;
+}
+
+
+
+function motor_start() {
+  
+  $output = '';
+  $node = node_load($_COOKIE['jumime_sound']);
+  $output.= '<div id="info">';
+  $output.= '<div id="sound-info"><strong>' . $node->title . '</strong> (<a href="/choose-music">choose another music</a>)</div>';
+  $output.= '<div id="counter-info"><strong>' . $_COOKIE['jumime_time'] . 'sec</strong> (<a href="/choose-music">set count back time</a>)</div>';
+  $output.= '</div>';
+  $output.= '<div id="start_meditation">>start<</div><div id="timer"></div><span id="timer-reset"><a href="/">(restart)</a></span>';
+  
+  //$output.= drupal_render(node_view($node));
+  return $output;
+}
+

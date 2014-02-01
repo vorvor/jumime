@@ -1,0 +1,233 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+/* HTML element (SMACSS base) rules */
+@import "normalize.css";
+
+/* Layout rules */
+@import "layouts/responsive.css";
+
+/* Component (SMACSS module) rules */
+@import "components/misc.css";
+/* Optionally, add your own components here. */
+@import "print.css";
+
+/* SMACSS theme rules */
+/* @import "theme-A.css"; */
+/* @import "theme-B.css"; */
+
+@font-face {
+    font-family: 'bebas';
+    src: url('../fonts/fontfabric_-_nexablack-webfont.eot');
+    src: local('bebas'), 
+         local('bebas'), 
+         url('../fonts/fontfabric_-_nexablack-webfont.ttf') format('truetype'),
+         url('../fonts/fontfabric_-_nexablack-webfont.svg#font') format('svg');
+    font-weight:bold;
+}
+
+@font-face {
+    font-family: 'bebas2';
+    src: url('../fonts/fontfabric_-_nexaregular-webfont.eot');
+    src: local('bebas'), 
+         local('bebas'), 
+         url('../fonts/fontfabric_-_nexaregular-webfont.ttf') format('truetype'),
+         url('../fonts/fontfabric_-_nexaregular-webfont.svg#font') format('svg');
+    font-weight:bold;
+}
+
+body {
+    background:#000;
+    color:#fff;
+}
+
+a {
+    color:#fff;
+    text-decoration: none;
+}
+
+#page, input {
+      text-transform: uppercase;
+}
+
+h1, h2, h3 {
+    font-family: bebas;
+    text-transform: uppercase;
+}
+
+h1#page-title {
+    line-height:0.5em;
+}
+
+#start_meditation {
+    cursor:pointer;
+    font-family: bebas;
+    font-size:3em;
+    margin:1em 0 0.2em;
+}
+
+#info {
+    font-size:0.6em;
+}
+
+#info div {
+    display:inline;
+}
+
+#sound-info {
+    margin-right:10px;
+    padding-right:10px;
+    
+}
+
+#block-userloginbar-userloginbar {
+    font-size:0.6em;
+    font-family:bebas2;
+}
+
+
+#block-userloginbar-userloginbar input {
+    margin:10px 6px 0 2px;
+}
+
+#user-login-form input.form-submit {
+    margin:11px 6px;
+}
+
+#user-login-form div.item-list ul li {
+  line-height: 4em;
+}
+
+#user-login-form label {
+float: left;
+margin: 8px 5px 0 10px;
+}
+
+
+#timer {
+    font-family:bebas;
+    font-size:3em;
+    margin:1em 0 0.2em;
+    display:none;
+}
+
+#timer-reset a {
+    font-size:1em;
+    font-family:bebas2;
+    display:none;
+}
+
+.choose-music-label {
+        font-family:bebas;
+    font-size:3em;
+    display:block;
+    line-height: 1.3em;
+    margin: 0 0 0 80px;
+    display:none;
+}
+
+.choose-music {
+    overflow: hidden;
+}
+
+.choose-music input {
+    width:62px;
+    height:62px;
+    
+    float:left;
+
+}
+.timer_value {
+width: 67px;
+display: block;
+float: left;
+font-family:bebas;
+}
+
+.timer_value input {
+    width:32px;
+    height:32px;
+
+
+}
+
+.view-choose-music .view-header {
+    clear:both;
+    font-family: bebas;
+    border-bottom:2px solid #fff;
+    margin-top:100px;
+}
+
+.view-choose-music .views-row {
+    margin-bottom:20px;
+    padding-bottom:20px;
+    border-bottom:2px solid #fff;
+    clear:both;
+    overflow: hidden;
+}
+
+.view-choose-music .views-field-nid .field-content {
+    display:none;
+}
+
+.view-choose-music .views-field-field-music {
+    float:left;
+}
+
+.view-choose-music .views-field-nid {
+margin: 26px 40px;
+float: left;
+}
+
+.view-choose-music .views-field-title {
+  font-family:bebas;
+}
+
+h2.count-back-time-chooser,
+.view-choose-music .view-header h2 {
+    margin:0;
+}
+
+h2.count-back-time-chooser {
+    border-bottom:2px solid #fff;
+    margin:0 0 20px 0;
+}
+
+#back-to-home {
+    position: fixed;
+    right:0;
+    top:20%;
+    background: red;
+    color:#000;
+    padding:10px;
+    z-index:100;
+}
+
+#back-to-home a {
+    color:#000;
+    font-family:bebas;
+}
+
+#views_slideshow_controls_text_pause_tips-block {
+    display:none;
+}
+
+.view-tips h2,
+.view-tips h3 {
+    line-height: 1.2em;
+    margin:1em 0;
+}
+
+#views_slideshow_controls_text_tips-block {
+    font-family: bebas;
+    font-size:3em;
+}
+
+#views_slideshow_controls_text_next_tips-block {
+    float:right;
+}

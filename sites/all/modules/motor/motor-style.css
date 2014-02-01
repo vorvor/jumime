@@ -1,0 +1,24 @@
+body {
+ 
+}
+
+.view-pics-of-games .views-row {
+ float:left;
+}
+
+#block-motor-game-info-block {
+ position:absolute;
+ z-index:500;
+ left: 63%;
+ top: 18%;
+ width: 260px;
+background: #fff;
+padding: 10px;
+}
+
+.page-add-tip #page .form-actions {
+z-index: 1000000000;
+position: absolute;
+left: 63%;
+top: 68%;
+}

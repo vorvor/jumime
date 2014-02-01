@@ -1,0 +1,5 @@
+name = MOTOR - Proximity in code view
+description = Provides a .
+core = 7.x
+stylesheets[all][] = motor-style.css
+scripts[] = script.js
